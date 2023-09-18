@@ -1,0 +1,28 @@
+﻿@using Multicars.Models.BD;
+
+@model Carros
+
+<div class="container">
+    <form method="post" asp-action="Editar_carros">
+        <div asp-validation-summary="All" class="text-danger"></div>
+
+        <input asp-for="id" hidden/>
+        <div asp-validation-summary="All" class="text-danger"></div>
+
+        <label asp-for="marca" class="col-sm-2 col-form-label"></label>
+        <input asp-for="marca" class="form-control" />
+
+        <label asp-for="modelo" class="col-sm-2 col-form-label"></label>
+        <input asp-for="modelo" class="form-control" />
+
+        <label asp-for="ano" class="col-sm-2 col-form-label"></label>
+        <input asp-for="ano" class="form-control" />
+
+        <label asp-for="cor" class="col-sm-2 col-form-label"></label>
+        <input asp-for="cor" class="form-control" />
+        <br />
+        <br />
+        <button class="btn btn-primary" type="submit">Atualizar</button>
+
+    </form>
+</div>

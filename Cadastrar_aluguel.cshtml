@@ -1,0 +1,22 @@
+﻿@using Multicars.Models.BD;
+@model Alugueis
+
+<form method="post" asp-action="Cadastrar_aluguel">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <label asp-for="CNH" class="col-sm-2 col-form-label"></label>
+    <select asp-for="CNH" asp-items="ViewBag.Cliente" class="form-control"></select>
+
+    <label asp-for="id_carro" class="col-sm-2 col-form-label"></label>
+    <select asp-for="id_carro" asp-items="ViewBag.Carro" class="form-control"></select>
+
+    <label asp-for="Data_alugada" class="col-sm-2 col-form-label"></label>
+    <input asp-for="Data_alugada" class="form-control" />
+
+    <label asp-for="Data_retorno" class="col-sm-2 col-form-label"></label>
+    <input asp-for="Data_retorno" class="form-control" />
+
+
+    <button class="btn btn-primary" type="submit">Alugar Carro</button>
+
+</form>

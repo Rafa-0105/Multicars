@@ -1,0 +1,47 @@
+﻿@using Multicars.Models.BD
+
+@model IEnumerable<Carros>
+
+<a asp-controller="Multicars" class="btn btn-primary" asp-action="Cadastrar_Carros">New Car</a>
+<br>
+<br>
+
+<style>
+    body{
+        background-color: #006064
+    }
+
+    .table {
+        background-color: white;
+    }
+</style>
+@if (Model == null)
+{
+
+}
+else if (Model.Any())
+{
+    <table class="table table-dark table-striped">
+        <thead class="table-Secondary">
+        <th>Brand</th>
+        <th>Model</th>
+        <th>Year</th>
+        <th>Color</th>
+        <th>+info</th>
+        </thead>
+        <tbody>
+            @foreach (var carros in Model)
+            {
+                <tr class="align-middle">
+                    <td>@carros.marca</td>
+                    <td>@carros.modelo</td>
+                    <td>@carros.ano</td>
+                    <td>@carros.cor</td>
+                    <td><a asp-controller="Multicars" class="btn btn-outline-info" asp-action="Editar_carros" asp-route-id="@carros.id">Edit Cars</a></td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+
+}

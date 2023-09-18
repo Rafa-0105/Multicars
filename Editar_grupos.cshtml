@@ -1,0 +1,21 @@
+﻿@using Multicars.Models.BD;
+
+@model Grupos
+
+<div class="container">
+    <form method="post" asp-action="Editar_grupos">
+        <div asp-validation-summary="All" class="text-danger"></div>
+
+        <input asp-for="id" hidden/>
+        <div asp-validation-summary="All" class="text-danger"></div>
+
+        <label asp-for="nome" class="col-sm-2 col-form-label"></label>
+        <input asp-for="nome" class="form-control"/>
+
+        <label asp-for="valor" class="col-sm-2 col-form-label"></label>
+        <input asp-for="valor" class="form-control"/>
+        <br />
+        <br />
+        <button class="btn btn-primary" type="submit">Atualizar</button>
+    </form>
+</div>

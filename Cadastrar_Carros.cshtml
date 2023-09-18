@@ -1,0 +1,24 @@
+﻿@using Multicars.Models.BD;
+@model Carros
+
+<form method="post" asp-action="Cadastrar_Carros">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <label asp-for="marca" class="col-sm-2 col-form-label"></label>
+    <input asp-for="marca" class="form-control" />
+
+    <label asp-for="modelo" class="col-sm-2 col-form-label"></label>
+    <input asp-for="modelo" class="form-control" />
+
+    <label asp-for="ano" class="col-sm-2 col-form-label"></label>
+    <input asp-for="ano" class="form-control" />
+
+    <label asp-for="cor" class="col-sm-2 col-form-label"></label>
+    <input asp-for="cor" class="form-control" />
+
+    <label asp-for="grupo" class="col-sm-2 col-form-label"></label>
+    <select asp-for="grupo" asp-items="ViewBag.Grupo" class="form-control"></select>
+
+    <button class="btn btn-primary" type="submit">Cadastrar Carro</button>
+
+</form>

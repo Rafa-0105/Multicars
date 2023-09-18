@@ -1,0 +1,20 @@
+﻿@using Multicars.Models.BD;
+
+@model Cliente
+
+<div class="container">
+    <form method="post" asp-action="Editar_cliente">
+        <div asp-validation-summary="All" class="text-danger"></div>
+
+        <input asp-for="CNH" hidden />
+
+        <label asp-for="nome" class="col-sm-2 col-form-label"></label>
+        <input asp-for="nome" class="form-control" />
+
+        <label asp-for="Data_Nasc" class="col-sm-2 col-form-label"></label>
+        <input asp-for="Data_Nasc" class="form-control" />
+        <br />
+        <br />
+        <button class="btn btn-primary" type="submit">Atualizar</button>
+    </form>
+</div>
